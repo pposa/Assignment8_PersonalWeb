@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Prerna Posa</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Prerna Posa</a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Overlay for mobile -->
+    <div class="overlay" id="overlay"></div>
+
+    <main>
+        <section class="section">
+            <h2>Get In Touch</h2>
+            <p>I'm always excited to connect with new people and explore opportunities for collaboration. 
+               Whether you have a project in mind, want to discuss technology, or just want to say hello, 
+               I'd love to hear from you!</p>
+        </section>
+
+        <section class="section">
+            <h2>Contact Form</h2>
+            <form class="contact-form" id="contactForm" action="thankyou.html" method="GET">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required minlength="2" pattern="[A-Za-z\s]+" title="First name must contain only letters and spaces">
+                        <span class="error-message" id="firstNameError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required minlength="2" pattern="[A-Za-z\s]+" title="Last name must contain only letters and spaces">
+                        <span class="error-message" id="lastNameError"></span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address">
+                    <span class="error-message" id="emailError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" required minlength="8" pattern=".{8,}" title="Password must be at least 8 characters long">
+                    <span class="error-message" id="passwordError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password *</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required minlength="8" title="Password confirmation must match the password">
+                    <span class="error-message" id="confirmPasswordError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Tell me about your project or just say hello!"></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3>Email</h3>
+                <p>pposa@iu.edu</p>
+                <a href="mailto:pposa@iu.edu">Send me an email</a>
+            </div>
+            
+            <div class="contact-item">
+                <h3>Phone</h3>
+                <p>(847)-323-1085</p>
+                <a href="tel:+18473231085">Call me</a>
+            </div>
+            
+            <div class="contact-item">
+                <h3>LinkedIn</h3>
+                <p>Professional networking</p>
+                <a href="https://www.linkedin.com/in/prerna-p-/" target="_blank">Connect with me</a>
+            </div>
+            
+            <div class="contact-item">
+                <h3>Location</h3>
+                <p>Available for remote work</p>
+                <p>Open to relocation opportunities</p>
+            </div>
+        </div>
+
+        <section class="section">
+            <h2>Let's Work Together</h2>
+            <p>I'm passionate about creating meaningful digital experiences and solving complex problems through technology. 
+               Here are some ways we can collaborate:</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div>
+                    <h3>Web Development</h3>
+                    <ul>
+                        <li>Custom website development</li>
+                        <li>E-commerce solutions</li>
+                        <li>Web application development</li>
+                        <li>API development and integration</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Consulting</h3>
+                    <ul>
+                        <li>Technical architecture review</li>
+                        <li>Code optimization</li>
+                        <li>Technology stack recommendations</li>
+                        <li>Development process improvement</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Collaboration</h3>
+                    <ul>
+                        <li>Open source contributions</li>
+                        <li>Hackathon participation</li>
+                        <li>Tech community involvement</li>
+                        <li>Mentoring and knowledge sharing</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Response Time</h2>
+            <p>I typically respond to messages within 24-48 hours. For urgent matters, feel free to reach out 
+               directly via email or LinkedIn. I'm always excited to discuss new opportunities and ideas!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Prerna Posa. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Enhanced form validation and submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Clear previous errors
+            clearErrors();
+            
+            // Get form elements
+            const firstName = document.getElementById('firstName');
+            const lastName = document.getElementById('lastName');
+            const email = document.getElementById('email');
+            const password = document.getElementById('password');
+            const confirmPassword = document.getElementById('confirmPassword');
+            
+            let isValid = true;
+            
+            // Validate First Name
+            if (!firstName.value.trim() || firstName.value.length < 2) {
+                showError('firstNameError', 'First name is required and must be at least 2 characters.');
+                isValid = false;
+            }
+            
+            // Validate Last Name
+            if (!lastName.value.trim() || lastName.value.length < 2) {
+                showError('lastNameError', 'Last name is required and must be at least 2 characters.');
+                isValid = false;
+            }
+            
+            // Validate Email
+            const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+            if (!email.value.trim()) {
+                showError('emailError', 'Email address is required.');
+                isValid = false;
+            } else if (!emailRegex.test(email.value)) {
+                showError('emailError', 'Please enter a valid email address.');
+                isValid = false;
+            }
+            
+            // Validate Password
+            if (!password.value || password.value.length < 8) {
+                showError('passwordError', 'Password is required and must be at least 8 characters long.');
+                isValid = false;
+            }
+            
+            // Validate Confirm Password
+            if (!confirmPassword.value) {
+                showError('confirmPasswordError', 'Please confirm your password.');
+                isValid = false;
+            } else if (password.value !== confirmPassword.value) {
+                showError('confirmPasswordError', 'Passwords do not match.');
+                isValid = false;
+            }
+            
+            // If all validation passes, redirect to thank you page
+            if (isValid) {
+                // In a real application, you would send this data to a server
+                console.log('Form submitted successfully');
+                window.location.href = 'thankyou.html';
+            }
+        });
+        
+        // Real-time validation for password confirmation
+        document.getElementById('confirmPassword').addEventListener('input', function() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = this.value;
+            
+            if (confirmPassword && password !== confirmPassword) {
+                showError('confirmPasswordError', 'Passwords do not match.');
+            } else {
+                clearError('confirmPasswordError');
+            }
+        });
+        
+        // Helper functions
+        function showError(elementId, message) {
+            const errorElement = document.getElementById(elementId);
+            errorElement.textContent = message;
+            errorElement.style.display = 'block';
+        }
+        
+        function clearError(elementId) {
+            const errorElement = document.getElementById(elementId);
+            errorElement.textContent = '';
+            errorElement.style.display = 'none';
+        }
+        
+        function clearErrors() {
+            const errorElements = document.querySelectorAll('.error-message');
+            errorElements.forEach(element => {
+                element.textContent = '';
+                element.style.display = 'none';
+            });
+        }
+
+        // Mobile navigation functionality
+        const hamburger = document.getElementById('hamburger');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+
+        overlay.addEventListener('click', function() {
+            hamburger.classList.remove('active');
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+
+        // Close sidebar when clicking on a link
+        const sidebarLinks = sidebar.querySelectorAll('a');
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

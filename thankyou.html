@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Prerna Posa</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Prerna Posa</a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Overlay for mobile -->
+    <div class="overlay" id="overlay"></div>
+
+    <main>
+        <section class="hero">
+            <h1>Thank You!</h1>
+            <p>Your message has been successfully submitted. I'll get back to you as soon as possible!</p>
+        </section>
+
+        <section class="section">
+            <h2>What's Next?</h2>
+            <p>I typically respond to messages within 24-48 hours. In the meantime, feel free to:</p>
+            <ul style="margin-left: 1.5rem; margin-top: 1rem;">
+                <li>Check out my <a href="projects.html">projects</a> to see more of my work</li>
+                <li>Read more <a href="about.html">about me</a> and my background</li>
+                <li>View my <a href="resume.html">resume</a> for detailed experience</li>
+                <li>Connect with me on <a href="https://www.linkedin.com/in/prerna-p-/" target="_blank">LinkedIn</a></li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Stay Connected</h2>
+            <p>I'm always excited to discuss new opportunities, collaborations, or just chat about technology and business strategy. 
+               Don't hesitate to reach out again if you have any questions!</p>
+            
+            <div style="margin-top: 2rem;">
+                <a href="contact.html" class="btn">Send Another Message</a>
+                <a href="index.html" class="btn" style="margin-left: 1rem; background: #28a745;">Back to Home</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Prerna Posa. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile navigation functionality
+        const hamburger = document.getElementById('hamburger');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+
+        overlay.addEventListener('click', function() {
+            hamburger.classList.remove('active');
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+
+        // Close sidebar when clicking on a link
+        const sidebarLinks = sidebar.querySelectorAll('a');
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
