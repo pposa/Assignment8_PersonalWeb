@@ -1,3 +1,9 @@
+# AiDD-pposa-lab01
+My first AIDD GitHub repo
+Prerna Posa 08/26/2025
+
+---
+
 # Personal Portfolio Website
 
 A modern, responsive personal portfolio website built with HTML, CSS, and JavaScript.
