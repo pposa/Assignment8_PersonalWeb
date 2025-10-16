@@ -153,8 +153,7 @@ The main stylesheet is located at `css/styles.css`. You can customize:
 
 ## AI Usage Tracking
 
-This project was created with AI assistance. All AI interactions and tool usage are documented in `ai_usage_tracking.md` for transparency and learning purposes.
-
+This project was created with AI assistance.
 ## License
 
 This project is for educational and personal use. Feel free to customize and use as needed for your portfolio.
