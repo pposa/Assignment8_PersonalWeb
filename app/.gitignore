@@ -1,0 +1,42 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# Python cache and compiled files
+*.pyc
+*.pyo
+*.pyd
+
+# Database files
+*.db
+*.sqlite3
+
+# Flask instance folder
+instance/
+
+# Environment variables
+.env
+
+# macOS
+.DS_Store
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# Docker
+*.log
+
+# Static build artifacts
+dist/
+build/
+
+# Others
+coverage/
+htmlcov/

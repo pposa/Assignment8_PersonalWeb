@@ -48,6 +48,33 @@
         </section>
 
         <section class="section">
+            <h2>Add a Project</h2>
+            <form class="contact-form" id="projectForm" action="{{ url_for('add_project') }}" method="POST">
+                <div class="form-group">
+                    <label for="title">Project Title *</label>
+                    <input type="text" id="title" name="title" required minlength="2">
+                    <span class="error-message" id="titleError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description *</label>
+                    <textarea id="description" name="description" rows="4" required minlength="10" placeholder="Brief description of the project..."></textarea>
+                    <span class="error-message" id="descriptionError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="image_filename">Image File Name *</label>
+                    <input type="text" id="image_filename" name="image_filename" required pattern="[^\\/]+\.(png|jpg|jpeg|gif)$" title="Provide just the filename, e.g., example.png">
+                    <span class="error-message" id="imageError"></span>
+                </div>
+
+                <p style="color:#555; font-size:0.95rem;">Place your image in <code>static/images/</code> and enter only the file name above (e.g., <em>EY1.png</em>).</p>
+
+                <button type="submit" class="btn">Add Project</button>
+            </form>
+        </section>
+
+        <section class="section">
             <h2>Contact Form</h2>
             <form class="contact-form" id="contactForm" action="thankyou.html" method="GET">
                 <div class="form-row">

@@ -9,6 +9,116 @@
 <body>
     <header>
         <nav>
+            <a href="{{ url_for('home') }}" class="logo">Prerna Posa</a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Me</a></li>
+                <li><a href="{{ url_for('resume') }}">Resume</a></li>
+                <li><a href="{{ url_for('projects') }}">Projects</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <ul class="nav-links">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About Me</a></li>
+            <li><a href="{{ url_for('resume') }}">Resume</a></li>
+            <li><a href="{{ url_for('projects') }}">Projects</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <main>
+        <section class="section">
+            <h2>Projects</h2>
+            {% if projects and projects|length > 0 %}
+            <table class="section" style="width:100%; border-collapse: collapse;">
+                <thead>
+                    <tr>
+                        <th style="text-align:left; padding: 0.75rem; border-bottom: 2px solid #ddd;">Title</th>
+                        <th style="text-align:left; padding: 0.75rem; border-bottom: 2px solid #ddd;">Description</th>
+                        <th style="text-align:left; padding: 0.75rem; border-bottom: 2px solid #ddd;">Images</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for p in projects %}
+                    <tr>
+                        <td style="vertical-align: top; padding: 0.75rem;">{{ p.Title }}</td>
+                        <td style="vertical-align: top; padding: 0.75rem;">{{ p.Description }}</td>
+                        <td style="vertical-align: top; padding: 0.75rem;">
+                            {% if p.Images %}
+                            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.75rem;">
+                                {% for img in p.Images %}
+                                <a href="{{ url_for('static', filename='images/' ~ img) }}" target="_blank" style="display:block;">
+                                    <img src="{{ url_for('static', filename='images/' ~ img) }}" alt="{{ p.Title }} image" class="project-image" style="height: 160px; object-fit: contain; background: #fff;" />
+                                </a>
+                                {% endfor %}
+                            </div>
+                            {% else %}
+                            <em>No images</em>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+            <p>No projects found.</p>
+            {% endif %}
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Prerna Posa. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        if (hamburger) {
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                sidebar.classList.toggle('active');
+                overlay.classList.toggle('active');
+            });
+        }
+        if (overlay) {
+            overlay.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+        }
+        document.querySelectorAll('#sidebar a').forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Prerna Posa</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
             <a href="/" class="logo">Prerna Posa</a>
             <div class="hamburger" id="hamburger">
                 <span></span>
